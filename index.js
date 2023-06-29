@@ -38,7 +38,7 @@ app.get('/:id/:cd', async (req, res, next) => {
 });
 
 /* Get a specific employee */
-app.get('test2/:id/:cd', async (req, res, next) => {
+app.get('/test2/:id/:cd', async (req, res, next) => {
   try {
     const { id, cd } = req.params;
 /*     const employee = await employees.findOne({

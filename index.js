@@ -205,7 +205,8 @@ app.get('/test6/:id/:cd', async (req, res, next) => {
 	postadresse: {
 		adresse: [
 			'Postboks 2857 , TØYEN',
-			'Postboks 6197 Etterstand'
+			'Postboks 6197 Etterstand',
+			'Test 3rd Line'
 		],
 		postnummer: 0608,
 		poststed: 'OSLO'

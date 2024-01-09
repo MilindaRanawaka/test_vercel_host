@@ -39,6 +39,37 @@ app.get('/:id/:cd', async (req, res, next) => {
 });
 
 /* Get a specific employee */
+app.post('new/:id/:cd', async (req, res, next) => {
+  try {
+    const { id, cd } = req.params;
+	  console.log("TEST");
+/*     const employee = await employees.findOne({
+      _id: id,
+    });
+
+    if (!employee) {
+      const error = new Error('Employee does not exist');
+      return next(error);
+    } */
+
+    res.json({
+  id: id,
+  organisasjonsnummer: cd,
+  firmanavn: '- Test Supplier Name',
+  adresse: [
+    'sStorgaten 120'
+  ],
+  postnummer: 3060,
+  poststed: 'SVELVIK',
+  konkurs: false,
+  avvikles: false
+});
+  } catch (error) {
+    next(error);
+  }
+});
+
+/* Get a specific employee */
 app.get('/test2/:id/:cd', async (req, res, next) => {
   try {
     const { id, cd } = req.params;

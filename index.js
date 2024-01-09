@@ -11,6 +11,7 @@ app.get("/", (req, res) => {
 app.get('/:id/:cd', async (req, res, next) => {
   try {
     const { id, cd } = req.params;
+	  console.log("TEST");
 /*     const employee = await employees.findOne({
       _id: id,
     });

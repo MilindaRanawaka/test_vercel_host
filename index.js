@@ -38,6 +38,10 @@ app.get('/:id/:cd', async (req, res, next) => {
   }
 });
 
+app.post('/cattest', (req, res) => {
+    res.send("POST Request Called")
+});
+
 /* Get a specific employee */
 app.post('new/:id/:cd', async (req, res, next) => {
   try {
